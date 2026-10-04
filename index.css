@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b3a4a;
+}
+.desktop-nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.desktop-nav a:hover{
+    color: #007bff;
+}
+/* 1. Hamburger Icon: Hidden by default on desktop */
+.hamburger-btn{
+    display: none;
+    background-color: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    color: #333;
+}
+/* 2. Menu List: Hidden by default, positioned absolute on the right */
+.menu-list{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #0f172a;
+    border-radius: 0 0 0 8px;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+    z-index: 1000;
+}
+.menu-list a{
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #1e293b;
+}
+.menu-list a:hover{
+    background-color: #1e293b;
+}
+/* 3. Mobile View Media Query */
+@media (max-width: 768px){
+    .desktop-nav{
+        display: none;
+    }
+    .hamburger-btn{
+
+    }display: block;
+}
+/* 4. Showing List on Click : Display menu when button is focused */
+.hamburger-btn:focus .menu-list,
+.hamburger-btn:focus-within .menu-list{
+    display: block;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+
+}
+.hero-content h1{
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+.hero-content p{
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+.btn-primary{
+    background-color: #0284c7;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: #0369a1;
+}
